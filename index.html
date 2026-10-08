@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Portal</title>
+    <style>
+        :root {
+            --primary: #2b6cb0;
+            --secondary: #2c5282;
+            --accent: #319795;
+            --bg: #edf2f7;
+            --card-bg: #ffffff;
+            --text: #2d3748;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        .container {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .form-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #285e61;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Student Feedback Portal</h1>
+        <p>Apex Institute of Technology</p>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <form onsubmit="event.preventDefault(); alert('Feedback submitted successfully!');">
+                <div class="form-group">
+                    <label for="course">Course Name</label>
+                    <input type="text" id="course" placeholder="e.g., Cloud Computing & DevOps" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="faculty">Faculty Name</label>
+                    <input type="text" id="faculty" placeholder="e.g., Dr. Jane Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="student">Student Name</label>
+                    <input type="text" id="student" placeholder="e.g., Ayush Yadav" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regno">Register Number</label>
+                    <input type="text" id="regno" placeholder="e.g., 20BCE1045" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" placeholder="e.g., Computer Science & Engineering" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rating (1 to 5)</label>
+                    <select id="rating" required>
+                        <option value="">Select Rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Feedback / Comments</label>
+                    <textarea id="comments" placeholder="Write your valuable feedback here..."></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Apex Institute of Technology. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
